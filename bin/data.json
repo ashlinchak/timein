@@ -1,0 +1,18 @@
+[
+    {
+        "timezone": "Europe/Berlin",
+        "payload": [
+            "Development Team",
+            "Release Team"
+        ],
+        "tag": "berlin"
+    },
+    {
+        "timezone": "America/New_York",
+        "payload": [
+            "Marketing team",
+            "Finance Team"
+        ],
+        "tag": "new-york"
+    }
+]
