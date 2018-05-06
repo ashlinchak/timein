@@ -2,6 +2,8 @@
 
 Show your data by timezones.
 
+![demo](https://github.com/ashlinchak/timein/blob/master/examples/timein.jpg)
+
 ### Usage
 1. Compile this repository or make executable `bin/timein` file.
 2. Prepare `data.json` and `config.json` files and leave them alongside executable `timein` file.
