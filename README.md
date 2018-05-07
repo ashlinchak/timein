@@ -21,5 +21,12 @@ Where:
 * `berlin` - tag for filtering;
 * `-t` - your local time. You want to see times on this time in other timezones that were filled in `data.json` file.
 
+### Configs
+You can change default configuration by editing `config.json` file.
+
+Editable configurations are:
+* `show_headers`
+* `data_column_name`
+
 ### Valid time zones
 https://en.wikipedia.org/wiki/List_of_tz_database_time_zones

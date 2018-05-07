@@ -1,3 +1,4 @@
 {
-    "show_headers": true
+    "show_headers": true,
+    "data_column_name": "Data"
 }

@@ -9,21 +9,19 @@ import (
 	"github.com/olekukonko/tablewriter"
 )
 
-var config Config
-
 type Table struct{}
 
 func (table *Table) Render(tag string, t time.Time) {
-	initConfig()
+	config := GetConfig()
 
 	tw := tablewriter.NewWriter(os.Stdout)
 	tw.SetAutoWrapText(false)
 
 	if config.ShowHeaders {
 		if tag == "" {
-			tw.SetHeader([]string{"Tag", "Time", "Data", "Time zone"})
+			tw.SetHeader([]string{"Tag", "Time", config.DataColumnName, "Time zone"})
 		} else {
-			tw.SetHeader([]string{"Time", "Data", "Time zone"})
+			tw.SetHeader([]string{"Time", config.DataColumnName, "Time zone"})
 		}
 	}
 
@@ -53,11 +51,6 @@ func tableRow(dataItem *DataItem, tag string, t time.Time) []string {
 	} else {
 		return []string{timeCell, data, dataItem.Timezone}
 	}
-}
-
-func initConfig() {
-	config = Config{}
-	config.SetDefaults()
 }
 
 func getData() Data {

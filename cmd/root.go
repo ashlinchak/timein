@@ -12,7 +12,6 @@ import (
 	"github.com/spf13/cobra"
 )
 
-var config lib.Config
 var selectedTime string
 var selectedTag string
 
@@ -67,12 +66,5 @@ func Execute() {
 }
 
 func init() {
-	cobra.OnInitialize(initConfig)
-
 	rootCmd.Flags().StringVarP(&selectedTime, "time", "t", "", "Time value e.g. \"10:00\"")
-}
-
-func initConfig() {
-	config = lib.Config{}
-	config.SetDefaults()
 }
