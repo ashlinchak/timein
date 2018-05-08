@@ -55,7 +55,7 @@ func renderTable(tag string, t time.Time) {
 }
 
 func printTime(t time.Time) {
-	fmt.Println("Time: ", color.CyanString(t.Format("2006-01-02 15:04:05")))
+	fmt.Fprintln(color.Output, fmt.Sprintf("Time: %s", color.CyanString(t.Format("2006-01-02 15:04:05"))))
 }
 
 func Execute() {

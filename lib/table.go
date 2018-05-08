@@ -1,7 +1,6 @@
 package lib
 
 import (
-	"os"
 	"strings"
 	"time"
 
@@ -14,7 +13,7 @@ type Table struct{}
 func (table *Table) Render(tag string, t time.Time) {
 	config := GetConfig()
 
-	tw := tablewriter.NewWriter(os.Stdout)
+	tw := tablewriter.NewWriter(color.Output)
 	tw.SetAutoWrapText(false)
 
 	if config.ShowHeaders {
